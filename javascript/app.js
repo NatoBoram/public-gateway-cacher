@@ -56,7 +56,7 @@ function start() {
 
 	hashToTest = document.querySelector("#input").value;
 
-	fetch('./gateways.json')
+	fetch('./json/gateways.json')
 		.then(res => res.json())
 		.then(gateways => checkGateways(gateways));
 }
