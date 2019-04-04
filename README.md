@@ -1,15 +1,13 @@
-# ipfs/public-gateway-checker
+# Public Gateway Cacher
 
-Checks which public IPFS gateways are online or not.
+Cache a specific hash on a bunch of public gateways.
 
-NOTE: All of these (except gateway.ipfs.io and ipfs.io) are hosted by third-parties and should be treated as such.
+**Note :** All of these (except gateway.ipfs.io and ipfs.io) are hosted by third-parties and should be treated as such.
 
-You can view this website on GitHub Pages: https://ipfs.github.io/public-gateway-checker/
+You can view this website on [IPFS](https://gateway.ipfs.io/ipfs/QmVR48RQfFPNBLJKNzUGNdTjkSPGvnzPKYTxmTBbT3Lpmu/).
 
-Here's a screenshot:
+Here's a screenshot :
 
 [![screenshot](https://ipfs.io/ipfs/QmUeCSd4gHio7MxZuRXCcLFXED9GpfntKcL87gmXvZV3ed)](https://ipfs.github.io/public-gateway-checker/)
 
-A CLI version `ipfg` is available here: https://github.com/JayBrown/Tools/tree/master/ipfg
-
-If you'd like to add a new public gateway, please edit `gateways.json` and submit a pull request.
+If you'd like to add a new public gateway, please go to [github.com/ipfs/public-gateway-checker](https://github.com/ipfs/public-gateway-checker), submit a pull request then open an issue here.
