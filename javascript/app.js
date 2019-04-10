@@ -1,4 +1,5 @@
 var hashToTest = "";
+var protocol = "";
 const $results = document.querySelector('#results');
 
 function returnHtmlLink(gateway) {
@@ -29,6 +30,7 @@ function checkGateways(gateways) {
 	const total = gateways.length;
 	let checked = 0;
 	gateways.forEach((gateway) => {
+		gateway = gateway.replace('/ipfs/', protocol);
 		const gatewayAndHash = gateway.replace(':hash', hashToTest);
 		// opt-out from gateway redirects done by browser extension
 		const testUrl = gatewayAndHash + '#x-ipfs-companion-no-redirect';
@@ -48,13 +50,28 @@ function checkGateways(gateways) {
 	});
 }
 
-function start() {
+function start_ipfs() {
 
 	while ($results.lastChild) {
 		$results.removeChild($results.lastChild);
 	}
 
-	hashToTest = document.querySelector("#input").value;
+	hashToTest = document.querySelector("#input_ipfs").value;
+	protocol = "/ipfs/";
+
+	fetch('./json/gateways.json')
+		.then(res => res.json())
+		.then(gateways => checkGateways(gateways));
+}
+
+function start_ipns() {
+
+	while ($results.lastChild) {
+		$results.removeChild($results.lastChild);
+	}
+
+	hashToTest = document.querySelector("#input_ipns").value;
+	protocol = "/ipns/";
 
 	fetch('./json/gateways.json')
 		.then(res => res.json())
