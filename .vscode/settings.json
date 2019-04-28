@@ -1,5 +1,10 @@
 {
-	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
-	"editor.formatOnSave": true
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
+	"editor.wordWrap": "on",
+	"html.format.indentHandlebars": true,
+	"html.format.maxPreserveNewLines": 1,
+	"html.format.wrapLineLength": 0,
+	"jshint.lintHTML": true,
 }
