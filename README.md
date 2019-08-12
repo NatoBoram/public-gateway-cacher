@@ -4,7 +4,7 @@ Cache a specific hash on a bunch of public gateways.
 
 **Note :** All of these (except gateway.ipfs.io and ipfs.io) are hosted by third-parties and should be treated as such.
 
-You can view this website on [IPFS](https://bafybeieg7y3ahtydtyfsnj4a5jqarpqvquwelaqmpkodxzz6lzkebe5gky.cf-ipfs.com).
+You can view this website on [IPFS](https://bafybeifqneiiwgcejnisxd6vjic2xrmfieffldiqembuagflb2xaup772a.cf-ipfs.com).
 
 Here's a screenshot :
 
