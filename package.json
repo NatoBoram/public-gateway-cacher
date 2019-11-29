@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open --ssl",
+    "start": "ng serve --ssl",
     "build": "ng build",
     "build:prod": "ng build --prod",
     "build:gitlab": "ng build --prod --base-href /public-gateway-cacher/",
@@ -19,6 +19,7 @@
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
     "@angular/core": "~8.2.14",
+    "@angular/flex-layout": "^8.0.0-beta.27",
     "@angular/forms": "~8.2.14",
     "@angular/material": "^8.2.3",
     "@angular/platform-browser": "~8.2.14",
