@@ -14,8 +14,6 @@ Now based on Angular!
 
 ### Changed
 
-* Migrated to Angular
-
 ### Deprecated
 
 ### Removed
