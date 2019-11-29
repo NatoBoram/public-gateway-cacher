@@ -1,10 +1,17 @@
 {
-	"editor.detectIndentation": false,
-	"editor.formatOnSave": true,
-	"editor.insertSpaces": false,
-	"editor.wordWrap": "on",
-	"html.format.indentHandlebars": true,
-	"html.format.maxPreserveNewLines": 1,
-	"html.format.wrapLineLength": 0,
-	"jshint.lintHTML": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+  },
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    140
+  ],
+  "html.format.indentHandlebars": true,
+  "html.format.maxPreserveNewLines": 1,
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 140,
+  "npm.packageManager": "yarn",
+  "tslint.packageManager": "yarn",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
 }
