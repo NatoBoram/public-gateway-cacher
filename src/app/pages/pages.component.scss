@@ -1,5 +1,6 @@
 .mat-form-field {
-  min-width: 30em;
+  width: 30em;
+  max-width: 100%;
 }
 
 .mat-table {
@@ -7,7 +8,7 @@
 }
 
 .mat-progress-bar {
-  max-width: 60em;
+  width: 100%;
 }
 
 .mat-header-cell {
@@ -16,9 +17,11 @@
 
 .mat-column-error {
   text-align: center;
-  min-width: 5em;
+  width: 5em;
+  max-width: 100%;
 }
 
 .mat-column-gateway {
-  min-width: 50em;
+  width: 50em;
+  max-width: 100%;
 }
