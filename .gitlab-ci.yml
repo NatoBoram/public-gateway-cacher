@@ -1,9 +1,7 @@
 image: node:13
 
 before_script:
-  - yarn global add ipfs-npm
-  - ipfs-yarn global add @angular/cli
-  - ipfs-yarn
+  - yarn
 
 cache:
   paths:
@@ -12,24 +10,24 @@ cache:
 build:
   stage: build
   script:
-    - ipfs-yarn run build:prod
+    - yarn run build:prod
   artifacts:
     paths:
-      - dist
+      - dist/angular
 
 test:
   stage: test
   script:
-    - ipfs-yarn run lint
+    - yarn run lint
 
 page:
   stage: deploy
   script:
-    - ipfs-yarn run build:gitlab
+    - yarn run build:gitlab
     - mv dist/angular public
     - cp public/index.html public/404.html
   artifacts:
     paths:
-      - public
+      - dist/public
   only:
     - master
