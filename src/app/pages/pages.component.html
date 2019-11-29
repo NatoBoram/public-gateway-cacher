@@ -5,6 +5,7 @@
 
     <!-- Hash -->
     <mat-form-field>
+      <mat-label>Hash</mat-label>
       <input matInput [(ngModel)]="hash" name="hash">
     </mat-form-field>
 
@@ -13,14 +14,14 @@
 
   </form>
 
-  <mat-progress-bar *ngIf="dataSource && gateways" mode="determinate" [value]="dataSource.data.length / gateways.length * 100">
+  <mat-progress-bar *ngIf="hash && dataSource && gateways" mode="determinate" [value]="dataSource.data.length / gateways.length * 100">
   </mat-progress-bar>
 
-  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!-- Result Column -->
     <ng-container matColumnDef="error">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+      <th mat-header-cell *matHeaderCellDef> Status </th>
       <td mat-cell *matCellDef="let element">
         <div [ngSwitch]="element.error">
           <div *ngSwitchCase="null">✅</div>

@@ -1,6 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort } from '@angular/material/sort';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { GatewayService } from '../services/gateway.service';
 
@@ -20,7 +19,6 @@ export class PagesComponent implements OnInit {
   ];
 
   @ViewChild(MatTable, { static: false }) matTable: MatTable<Result>;
-  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
   constructor(
     private readonly gatewayService: GatewayService
@@ -28,7 +26,6 @@ export class PagesComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource([]);
-    this.dataSource.sort = this.sort;
     this.gatewayService.list().subscribe(gateways => this.gateways = gateways);
   }
 
