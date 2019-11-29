@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "yarn": "yarn-npm"
+    "yarn": "ipfs-yarn"
   },
   "private": false,
   "dependencies": {
