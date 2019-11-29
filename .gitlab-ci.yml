@@ -1,7 +1,7 @@
 image: node:13
 
 before_script:
-  - yarn global install ipfs-npm
+  - yarn global add ipfs-npm
   - ipfs-yarn
 
 cache:
