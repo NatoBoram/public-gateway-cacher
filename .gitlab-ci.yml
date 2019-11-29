@@ -20,7 +20,7 @@ test:
   script:
     - yarn run lint
 
-page:
+pages:
   stage: deploy
   script:
     - yarn run build:gitlab
@@ -31,3 +31,4 @@ page:
       - dist/public
   only:
     - master
+    - pages
