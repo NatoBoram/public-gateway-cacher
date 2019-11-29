@@ -15,8 +15,8 @@ export class GatewayService {
     return this.http.get<string[]>('/assets/json/gateways.json');
   }
 
-  get(gateway: string, hash: string): Observable<Blob> {
-    return this.http.get<Blob>(`${gateway.replace(':hash', hash)}#x-ipfs-companion-no-redirect`, {
+  get(gateway: string, type: string, hash: string): Observable<Blob> {
+    return this.http.get<Blob>(`${gateway.replace(':type', type).replace(':hash', hash)}#x-ipfs-companion-no-redirect`, {
       responseType: 'blob' as 'json'
     });
   }

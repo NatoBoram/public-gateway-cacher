@@ -1,12 +1,14 @@
-<div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="1em">
+<div fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="1em" class="container">
 
-  <!-- Form -->
-  <form fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="1em" (submit)="cache()">
+  <h1>Public IPFS Cacher</h1>
+
+  <!-- IPFS -->
+  <form fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="1em" (submit)="cacheIPFS()">
 
     <!-- Hash -->
     <mat-form-field>
-      <mat-label>Hash</mat-label>
-      <input matInput [(ngModel)]="hash" name="hash">
+      <mat-label>IPFS</mat-label>
+      <input matInput [(ngModel)]="ipfs" name="ipfs">
     </mat-form-field>
 
     <!-- Cache -->
@@ -14,7 +16,22 @@
 
   </form>
 
-  <mat-progress-bar *ngIf="hash && dataSource && gateways" mode="determinate" [value]="dataSource.data.length / gateways.length * 100">
+  <!-- IPNS -->
+  <form fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="1em" (submit)="cacheIPNS()">
+
+    <!-- Hash -->
+    <mat-form-field>
+      <mat-label>IPNS</mat-label>
+      <input matInput [(ngModel)]="ipns" name="ipns">
+    </mat-form-field>
+
+    <!-- Cache -->
+    <button mat-flat-button color="primary" type="submit">Cache</button>
+
+  </form>
+
+  <mat-progress-bar *ngIf="(ipfs || ipns) && dataSource && gateways" mode="determinate"
+    [value]="dataSource.data.length / gateways.length * 100">
   </mat-progress-bar>
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -34,10 +51,14 @@
     <ng-container matColumnDef="gateway">
       <th mat-header-cell *matHeaderCellDef> Gateway </th>
       <td mat-cell *matCellDef="let element">
-        <a [href]="element.gateway" [ngClass]="{
-          'aqua-muted': element.error,
-          aqua: !element.error
-        }"> {{ element.gateway }} </a>
+        <div [ngSwitch]="element.error">
+          <div *ngSwitchCase="null">
+            <strong><a [href]="element.gateway" class="aqua"> {{ element.gateway }} </a></strong>
+          </div>
+          <div *ngSwitchDefault>
+            <a [href]="element.gateway" class="aqua-muted"> {{ element.gateway }} </a>
+          </div>
+        </div>
       </td>
     </ng-container>
 
@@ -46,17 +67,19 @@
   </table>
 
   <!-- About -->
-  <h3>About</h3>
-  <p>
-    This allows you to cache a specific IPFS hash to a bunch of public gateways.
-    It's inspired from <a href="https://github.com/ipfs/public-gateway-checker">github.com/ipfs/public-gateway-checker</a>.
-    The source code is available at <a
-      href="https://gitlab.com/NatoBoram/public-gateway-checker">gitlab.com/NatoBoram/public-gateway-checker</a>.
-  </p>
-  <p>
-    If you'd like to add a new public gateway,
-    please go to <a href="https://github.com/ipfs/public-gateway-checker">github.com/ipfs/public-gateway-checker</a>,
-    submit a pull request then open an issue <a href="https://gitlab.com/NatoBoram/public-gateway-cacher/issues/new">here</a>.
-  </p>
+  <div fxLayout="column" fxLayoutAlign="space-evenly start" fxLayoutGap="1em">
+    <h3>About</h3>
+    <p>
+      This allows you to cache a specific IPFS hash to a bunch of public gateways.
+      It's inspired from <a href="https://github.com/ipfs/public-gateway-checker">github.com/ipfs/public-gateway-checker</a>.
+      The source code is available at <a
+        href="https://gitlab.com/NatoBoram/public-gateway-checker">gitlab.com/NatoBoram/public-gateway-checker</a>.
+    </p>
+    <p>
+      If you'd like to add a new public gateway,
+      please go to <a href="https://github.com/ipfs/public-gateway-checker">github.com/ipfs/public-gateway-checker</a>,
+      submit a pull request then open an issue <a href="https://gitlab.com/NatoBoram/public-gateway-cacher/issues/new">here</a>.
+    </p>
+  </div>
 
 </div>

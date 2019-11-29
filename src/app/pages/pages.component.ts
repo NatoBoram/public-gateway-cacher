@@ -11,7 +11,8 @@ import { GatewayService } from '../services/gateway.service';
 export class PagesComponent implements OnInit {
 
   gateways: string[];
-  hash: string;
+  ipfs: string;
+  ipns: string;
   dataSource: MatTableDataSource<Result>;
   displayedColumns = [
     'error',
@@ -29,17 +30,24 @@ export class PagesComponent implements OnInit {
     this.gatewayService.list().subscribe(gateways => this.gateways = gateways);
   }
 
-  cache(): void {
-    const hash = this.hash;
+  cacheIPFS(): void {
+    this.cache('ipfs', this.ipfs);
+  }
+
+  cacheIPNS(): void {
+    this.cache('ipns', this.ipns);
+  }
+
+  cache(type: string, hash: string): void {
     this.dataSource.data = [];
     this.matTable.renderRows();
 
     this.gateways.forEach(gateway => {
-      this.gatewayService.get(gateway, hash).subscribe(_ => {
-        this.dataSource.data.push({ gateway: `${gateway.replace(':hash', hash)}`, error: null });
+      this.gatewayService.get(gateway, type, hash).subscribe(_ => {
+        this.dataSource.data.push({ gateway: `${gateway.replace(':type', type).replace(':hash', hash)}`, error: null });
         this.matTable.renderRows();
       }, (error: HttpErrorResponse) => {
-        this.dataSource.data.push({ gateway: `${gateway.replace(':hash', hash)}`, error });
+        this.dataSource.data.push({ gateway: `${gateway.replace(':type', type).replace(':hash', hash)}`, error });
         this.matTable.renderRows();
       });
     });
