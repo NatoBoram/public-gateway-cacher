@@ -30,8 +30,7 @@
 
   </form>
 
-  <mat-progress-bar *ngIf="(ipfs || ipns) && dataSource && gateways" mode="determinate"
-    [value]="dataSource.data.length / gateways.length * 100">
+  <mat-progress-bar *ngIf="subscriptions.length" mode="determinate" [value]="dataSource.data.length / gateways.length * 100">
   </mat-progress-bar>
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -53,10 +52,10 @@
       <td mat-cell *matCellDef="let element">
         <div [ngSwitch]="element.error">
           <div *ngSwitchCase="null">
-            <strong><a [href]="element.gateway" class="aqua"> {{ element.gateway }} </a></strong>
+            <strong><a href="{{ element.gateway }}#x-ipfs-companion-no-redirect" class="aqua"> {{ element.gateway }} </a></strong>
           </div>
           <div *ngSwitchDefault>
-            <a [href]="element.gateway" class="aqua-muted"> {{ element.gateway }} </a>
+            <a href="{{ element.gateway }}#x-ipfs-companion-no-redirect" class="aqua-muted"> {{ element.gateway }} </a>
           </div>
         </div>
       </td>
