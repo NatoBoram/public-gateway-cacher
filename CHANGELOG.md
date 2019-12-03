@@ -6,11 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## [Unreleased]
 
-Now based on Angular!
-
 ### Added
-
-* GitLab Pages
 
 ### Changed
 
@@ -21,6 +17,16 @@ Now based on Angular!
 ### Fixed
 
 ### Security
+
+## [2.0.0] - 2019-12-03
+
+Now based on Angular!
+
+Tests were done with `ipfs-npm` : They weren't successful. `ipfs-css` is only minimally used.
+
+### Added
+
+* GitLab Pages - <https://natoboram.gitlab.io/public-gateway-cacher/>
 
 ## [1.0.0] - 2019-11-28
 

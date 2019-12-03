@@ -1,6 +1,6 @@
 {
   "name": "public-gateway-cacher",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --ssl",
@@ -11,7 +11,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "yarn": "ipfs-yarn"
+    "yarn": "ipfs-yarn",
+    "publish:ipfs": "yarn run build:ipfs; ipfs add --recursive --chunker=rabin --cid-version=1 dist/angular"
   },
   "private": false,
   "dependencies": {

@@ -51,6 +51,7 @@ export class PagesComponent implements OnInit {
 
     this.dataSource.data = [];
     this.matTable.renderRows();
+    console.clear();
 
     this.gateways.forEach(gateway => {
       this.subscriptions.push(
