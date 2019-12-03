@@ -3,7 +3,7 @@
   <h1>Public IPFS Cacher</h1>
 
   <!-- IPFS -->
-  <form fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="1em" (submit)="cacheIPFS()">
+  <form fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="1em">
 
     <!-- Hash -->
     <mat-form-field>
@@ -12,12 +12,12 @@
     </mat-form-field>
 
     <!-- Cache -->
-    <button mat-flat-button color="primary" type="submit">Cache</button>
+    <button mat-flat-button color="primary" type="button" (click)="cacheIPFS()">Cache</button>
 
   </form>
 
   <!-- IPNS -->
-  <form fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="1em" (submit)="cacheIPNS()">
+  <form fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="1em">
 
     <!-- Hash -->
     <mat-form-field>
@@ -26,7 +26,7 @@
     </mat-form-field>
 
     <!-- Cache -->
-    <button mat-flat-button color="primary" type="submit">Cache</button>
+    <button mat-flat-button color="primary" type="button" (click)="cacheIPNS()">Cache</button>
 
   </form>
 

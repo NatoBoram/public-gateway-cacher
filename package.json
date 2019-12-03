@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --ssl",
-    "build": "ng build",
-    "build:prod": "ng build --prod",
-    "build:gitlab": "ng build --prod --base-href /public-gateway-cacher/",
+    "build": "ng build --base-href /",
+    "build:prod": "ng build --configuration=production --base-href /",
+    "build:gitlab": "ng build --configuration=gitlab --base-href /public-gateway-cacher/",
+    "build:ipfs": "ng build --configuration=ipfs",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

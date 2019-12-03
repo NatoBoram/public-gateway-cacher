@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,11 @@ export class GatewayService {
   ) { }
 
   list(): Observable<string[]> {
-    return this.http.get<string[]>('/assets/json/gateways.json');
+    return this.http.get<string[]>(
+      environment.base_href && environment.base_href !== '/'
+        ? `${environment.base_href}/assets/json/gateways.json`
+        : '/assets/json/gateways.json'
+    );
   }
 
   get(gateway: string, type: string, hash: string): Observable<Blob> {

@@ -4,6 +4,10 @@ before_script:
   - yarn
 
 cache:
+  key:
+    files:
+      - package.json
+      - yarn.lock
   paths:
     - node_modules
 
@@ -28,7 +32,7 @@ pages:
     - cp public/index.html public/404.html
   artifacts:
     paths:
-      - dist/public
+      - public
   only:
     - master
     - pages
