@@ -8,9 +8,9 @@ You can view this website on [IPFS](https://bafybeibjf6z3sxavox6uahfl4vogkueniml
 
 Here's a screenshot :
 
-![screenshot](https://ipfs.io/ipfs/QmUeCSd4gHio7MxZuRXCcLFXED9GpfntKcL87gmXvZV3ed)
+![screenshot](https://bafybeicfvbezkavmric3lc2c4hmgul7h7egva4btezs5hu2fj2ly4dttvq.cf-ipfs.com/Screenshot_2019-12-03%20Public%20Gateway%20Cacher.png)
 
-If you'd like to add a new public gateway, please go to [github.com/ipfs/public-gateway-checker](https://github.com/ipfs/public-gateway-checker), submit a pull request then open an issue here.
+If you'd like to add a new public gateway, please go to [github.com/ipfs/public-gateway-checker](https://github.com/ipfs/public-gateway-checker), submit a pull request then open an issue [here](https://gitlab.com/NatoBoram/public-gateway-cacher/issues/new).
 
 ## Angular
 
