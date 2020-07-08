@@ -15,6 +15,7 @@
     "publish:ipfs": "yarn run build:ipfs && ipfs add --recursive --chunker=buzhash --cid-version=1 dist/angular"
   },
   "private": false,
+  "sideEffects": false,
   "dependencies": {
     "@angular/animations": "~10.0.2",
     "@angular/cdk": "~10.0.1",

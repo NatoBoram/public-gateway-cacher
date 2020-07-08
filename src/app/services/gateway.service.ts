@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { Protocol } from '../enums/protocol.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -13,22 +14,27 @@ export class GatewayService {
   ) { }
 
   list(): Observable<string[]> {
-    return this.http.get<string[]>(
-      environment.base_href && environment.base_href !== '/'
-        ? `${environment.base_href}/assets/json/gateways.json`
-        : `${document.querySelector('base').href}/assets/json/gateways.json`
-    );
+    if (environment && environment.base_href !== '/') {
+      return this.http.get<string[]>(`${environment.base_href}/assets/json/gateways.json`);
+    }
+
+    const base = document.querySelector('base');
+    if (base) {
+      return this.http.get<string[]>(`${base.href}/assets/json/gateways.json`);
+    }
+
+    throw new Error('Couldn\'t find environment nor base.')
   }
 
-  get(gateway: string, type: string, hash: string): Observable<Blob> {
-    return this.http.get<Blob>(`${this.url(gateway, type, hash)}#x-ipfs-companion-no-redirect`, {
+  get(gateway: string, protocol: Protocol, hashpath: string): Observable<Blob> {
+    return this.http.get<Blob>(`${this.url(gateway, protocol, hashpath)}#x-ipfs-companion-no-redirect`, {
       responseType: 'blob' as 'json'
     });
   }
 
-  url(gateway: string, type: string, hashpath: string): string {
-    const splits = hashpath.split('/');
-    const url = gateway.replace(':type', type).replace(':hash', splits.shift());
+  url(gateway: string, protocol: Protocol, hashpath: string): string {
+    const splits: string[] = hashpath.split('/');
+    const url: string = gateway.replace(':type', protocol).replace(':hash', splits.shift() || '');
     return splits.length ? [url, splits.join('/')].join('/') : url;
   }
 

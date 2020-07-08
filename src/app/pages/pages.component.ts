@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
+import { Protocol } from '../enums/protocol.enum';
 import { GatewayService } from '../services/gateway.service';
 
 @Component({
@@ -11,65 +12,63 @@ import { GatewayService } from '../services/gateway.service';
 })
 export class PagesComponent implements OnInit {
 
-  gateways: string[];
-  ipfs: string;
-  ipns: string;
-  dataSource: MatTableDataSource<Result>;
-  displayedColumns = [
-    'error',
-    'gateway',
-  ];
-  subscriptions: Subscription[] = [];
+  @ViewChild(MatTable) matTable!: MatTable<Result>;
 
-  @ViewChild(MatTable) matTable: MatTable<Result>;
+  gateways!: string[];
+  ipfs = '';
+  ipns = '';
+
+  readonly dataSource = new MatTableDataSource<Result>([]);
+  readonly displayedColumns: ['error', 'gateway'] = ['error', 'gateway'];
+  readonly subscriptions: Subscription[] = [];
 
   constructor(
     private readonly gatewayService: GatewayService
   ) { }
 
   ngOnInit(): void {
-    this.dataSource = new MatTableDataSource([]);
     this.gatewayService.list().subscribe((gateways): void => { this.gateways = gateways; });
   }
 
   cacheIPFS(): void {
-    this.cache('ipfs', this.ipfs);
+    this.cache(Protocol.IPFS, this.ipfs);
   }
 
   cacheIPNS(): void {
-    this.cache('ipns', this.ipns);
+    this.cache(Protocol.IPNS, this.ipns);
   }
 
-  cache(type: string, hash: string): void {
+  cache(protocol: Protocol, hashpath: string): void {
 
+    // Clear subscriptions
     while (this.subscriptions.length) {
       const sub = this.subscriptions.pop();
-      if (!sub.closed) {
+      if (sub && !sub.closed) {
         sub.unsubscribe();
       }
     }
 
+    // Clear table
     this.dataSource.data = [];
     this.matTable.renderRows();
     console.clear();
 
     this.gateways.forEach((gateway): void => {
       this.subscriptions.push(
-        this.gatewayService.get(gateway, type, hash).subscribe((): void => {
-          this.dataSource.data.push({ gateway: this.gatewayService.url(gateway, type, hash), error: null });
+        this.gatewayService.get(gateway, protocol, hashpath).subscribe((): void => {
+          this.dataSource.data.push({ gateway: this.gatewayService.url(gateway, protocol, hashpath), error: null });
           this.matTable.renderRows();
         }, (error: HttpErrorResponse): void => {
-          this.dataSource.data.push({ gateway: this.gatewayService.url(gateway, type, hash), error });
+          this.dataSource.data.push({ gateway: this.gatewayService.url(gateway, protocol, hashpath), error });
           this.matTable.renderRows();
         })
       );
     });
-
   }
 
 }
 
 interface Result {
   gateway: string;
-  error: HttpErrorResponse;
+  error: HttpErrorResponse | null;
 }
