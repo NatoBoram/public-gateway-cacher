@@ -12,7 +12,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "yarn": "ipfs-yarn",
-    "publish:ipfs": "yarn run build:ipfs; ipfs add --recursive --chunker=rabin --cid-version=1 dist/angular"
+    "publish:ipfs": "yarn run build:ipfs && ipfs add --recursive --chunker=buzhash --cid-version=1 dist/angular"
   },
   "private": false,
   "dependencies": {
