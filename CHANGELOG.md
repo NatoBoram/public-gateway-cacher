@@ -8,13 +8,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Added
 
+- Support for subdomain gateways
+- Strict Mode
+
 ### Changed
 
 - Better screenshot
 - Upgraded to Angular 10
 - Now uses `--chunker=buzhash`
 - Updated `bootstrap` and `ipfs-css`
-- Added support for subdomain gateways
 
 ### Deprecated
 
