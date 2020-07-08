@@ -21,9 +21,15 @@ export class GatewayService {
   }
 
   get(gateway: string, type: string, hash: string): Observable<Blob> {
-    return this.http.get<Blob>(`${gateway.replace(':type', type).replace(':hash', hash)}#x-ipfs-companion-no-redirect`, {
+    return this.http.get<Blob>(`${this.url(gateway, type, hash)}#x-ipfs-companion-no-redirect`, {
       responseType: 'blob' as 'json'
     });
+  }
+
+  url(gateway: string, type: string, hashpath: string): string {
+    const splits = hashpath.split('/');
+    const url = gateway.replace(':type', type).replace(':hash', splits.shift());
+    return splits.length ? [url, splits.join('/')].join('/') : url;
   }
 
 }

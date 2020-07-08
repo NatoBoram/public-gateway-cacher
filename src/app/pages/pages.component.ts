@@ -56,10 +56,10 @@ export class PagesComponent implements OnInit {
     this.gateways.forEach((gateway): void => {
       this.subscriptions.push(
         this.gatewayService.get(gateway, type, hash).subscribe((): void => {
-          this.dataSource.data.push({ gateway: `${gateway.replace(':type', type).replace(':hash', hash)}`, error: null });
+          this.dataSource.data.push({ gateway: this.gatewayService.url(gateway, type, hash), error: null });
           this.matTable.renderRows();
         }, (error: HttpErrorResponse): void => {
-          this.dataSource.data.push({ gateway: `${gateway.replace(':type', type).replace(':hash', hash)}`, error });
+          this.dataSource.data.push({ gateway: this.gatewayService.url(gateway, type, hash), error });
           this.matTable.renderRows();
         })
       );

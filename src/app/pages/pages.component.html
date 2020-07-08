@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="1em" class="container">
+<div class="container" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="1em">
 
   <h1>Public IPFS Cacher</h1>
 
@@ -8,11 +8,11 @@
     <!-- Hash -->
     <mat-form-field>
       <mat-label>IPFS</mat-label>
-      <input matInput [(ngModel)]="ipfs" name="ipfs">
+      <input name="ipfs" [(ngModel)]="ipfs" matInput>
     </mat-form-field>
 
     <!-- Cache -->
-    <button mat-flat-button color="primary" type="button" (click)="cacheIPFS()">Cache</button>
+    <button (click)="cacheIPFS()" type="button" mat-flat-button color="primary">Cache</button>
 
   </form>
 
@@ -22,18 +22,18 @@
     <!-- Hash -->
     <mat-form-field>
       <mat-label>IPNS</mat-label>
-      <input matInput [(ngModel)]="ipns" name="ipns">
+      <input name="ipns" [(ngModel)]="ipns" matInput>
     </mat-form-field>
 
     <!-- Cache -->
-    <button mat-flat-button color="primary" type="button" (click)="cacheIPNS()">Cache</button>
+    <button (click)="cacheIPNS()" type="button" mat-flat-button color="primary">Cache</button>
 
   </form>
 
-  <mat-progress-bar *ngIf="subscriptions.length" mode="determinate" [value]="dataSource.data.length / gateways.length * 100">
+  <mat-progress-bar [value]="dataSource.data.length / gateways.length * 100" *ngIf="subscriptions.length" mode="determinate">
   </mat-progress-bar>
 
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table class="mat-elevation-z8" [dataSource]="dataSource" mat-table>
 
     <!-- Result Column -->
     <ng-container matColumnDef="error">
@@ -41,7 +41,7 @@
       <td mat-cell *matCellDef="let element">
         <div [ngSwitch]="element.error">
           <div *ngSwitchCase="null">✅</div>
-          <div *ngSwitchDefault [matTooltip]="element.error.statusText">❌</div>
+          <div [matTooltip]="element.error.statusText" *ngSwitchDefault>❌</div>
         </div>
       </td>
     </ng-container>
@@ -52,10 +52,16 @@
       <td mat-cell *matCellDef="let element">
         <div [ngSwitch]="element.error">
           <div *ngSwitchCase="null">
-            <strong><a href="{{ element.gateway }}#x-ipfs-companion-no-redirect" class="aqua"> {{ element.gateway }} </a></strong>
+            <strong>
+              <a class="aqua" href="{{ element.gateway }}#x-ipfs-companion-no-redirect" target="_blank">
+                {{ element.gateway }}
+              </a>
+            </strong>
           </div>
           <div *ngSwitchDefault>
-            <a href="{{ element.gateway }}#x-ipfs-companion-no-redirect" class="aqua-muted"> {{ element.gateway }} </a>
+            <a class="aqua-muted" href="{{ element.gateway }}#x-ipfs-companion-no-redirect" target="_blank">
+              {{ element.gateway }}
+            </a>
           </div>
         </div>
       </td>
@@ -70,14 +76,15 @@
     <h3>About</h3>
     <p>
       This allows you to cache a specific IPFS hash to a bunch of public gateways.
-      It's inspired from <a href="https://github.com/ipfs/public-gateway-checker">github.com/ipfs/public-gateway-checker</a>.
-      The source code is available at <a
+      It's inspired from <a class="link" href="https://github.com/ipfs/public-gateway-checker">github.com/ipfs/public-gateway-checker</a>.
+      The source code is available at <a class="link"
         href="https://gitlab.com/NatoBoram/public-gateway-cacher">gitlab.com/NatoBoram/public-gateway-cacher</a>.
     </p>
     <p>
       If you'd like to add a new public gateway,
-      please go to <a href="https://github.com/ipfs/public-gateway-checker">github.com/ipfs/public-gateway-checker</a>,
-      submit a pull request then open an issue <a href="https://gitlab.com/NatoBoram/public-gateway-cacher/issues/new">here</a>.
+      please go to <a class="link" href="https://github.com/ipfs/public-gateway-checker">github.com/ipfs/public-gateway-checker</a>,
+      submit a pull request then open an issue <a class="link"
+        href="https://gitlab.com/NatoBoram/public-gateway-cacher/issues/new">here</a>.
     </p>
   </div>
 

@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Upgraded to Angular 10
 - Now uses `--chunker=buzhash`
 - Updated `bootstrap` and `ipfs-css`
+- Added support for subdomain gateways
 
 ### Deprecated
 
