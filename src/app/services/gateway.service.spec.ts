@@ -1,12 +1,11 @@
-import { TestBed } from '@angular/core/testing';
-
+import { TestBed, TestBedStatic } from '@angular/core/testing';
 import { GatewayService } from './gateway.service';
 
-describe('GatewayService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+describe('GatewayService', (): void => {
+  beforeEach((): TestBedStatic => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
-    const service: GatewayService = TestBed.get(GatewayService);
+  it('should be created', (): void => {
+    const service: GatewayService = TestBed.inject(GatewayService);
     expect(service).toBeTruthy();
   });
 });

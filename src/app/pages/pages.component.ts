@@ -29,7 +29,7 @@ export class PagesComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource([]);
-    this.gatewayService.list().subscribe(gateways => this.gateways = gateways);
+    this.gatewayService.list().subscribe((gateways): void => { this.gateways = gateways; });
   }
 
   cacheIPFS(): void {
@@ -53,12 +53,12 @@ export class PagesComponent implements OnInit {
     this.matTable.renderRows();
     console.clear();
 
-    this.gateways.forEach(gateway => {
+    this.gateways.forEach((gateway): void => {
       this.subscriptions.push(
-        this.gatewayService.get(gateway, type, hash).subscribe(_ => {
+        this.gatewayService.get(gateway, type, hash).subscribe((): void => {
           this.dataSource.data.push({ gateway: `${gateway.replace(':type', type).replace(':hash', hash)}`, error: null });
           this.matTable.renderRows();
-        }, (error: HttpErrorResponse) => {
+        }, (error: HttpErrorResponse): void => {
           this.dataSource.data.push({ gateway: `${gateway.replace(':type', type).replace(':hash', hash)}`, error });
           this.matTable.renderRows();
         })

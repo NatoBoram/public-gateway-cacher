@@ -196,6 +196,7 @@
   },
   "defaultProject": "public-gateway-cacher",
   "cli": {
-    "packageManager": "yarn"
+    "packageManager": "yarn",
+    "analytics": "10b848ad-8b81-4346-852f-5eff89573a85"
   }
 }
