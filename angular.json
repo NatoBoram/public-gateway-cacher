@@ -25,12 +25,7 @@
             "aot": true,
             "assets": [
               "src/favicon.png",
-              "src/assets",
-              {
-                "glob": "*",
-                "input": "node_modules/ipfs-css",
-                "output": "assets/ipfs-css"
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"
@@ -153,12 +148,7 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.png",
-              "src/assets",
-              {
-                "glob": "*",
-                "input": "node_modules/ipfs-css",
-                "output": "assets/ipfs-css"
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"
