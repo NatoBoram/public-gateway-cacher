@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponseBase } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
@@ -26,9 +26,9 @@ export class GatewayService {
     throw new Error('Couldn\'t find environment nor base.')
   }
 
-  get(gateway: string, protocol: Protocol, hashpath: string): Observable<Blob> {
-    return this.http.get<Blob>(`${this.url(gateway, protocol, hashpath)}#x-ipfs-companion-no-redirect`, {
-      responseType: 'blob' as 'json'
+  get(gateway: string, protocol: Protocol, hashpath: string): Observable<HttpResponseBase> {
+    return this.http.get<HttpResponseBase>(`${this.url(gateway, protocol, hashpath)}#x-ipfs-companion-no-redirect`, {
+      observe: 'response'
     });
   }
 

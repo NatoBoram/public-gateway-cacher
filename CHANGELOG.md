@@ -9,7 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Added
 
 - Support for subdomain gateways
-- Strict Mode
+- Strict mode
+- More icons
 
 ### Changed
 
