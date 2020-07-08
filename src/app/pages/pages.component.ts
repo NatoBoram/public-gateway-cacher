@@ -21,7 +21,7 @@ export class PagesComponent implements OnInit {
   ];
   subscriptions: Subscription[] = [];
 
-  @ViewChild(MatTable, { static: false }) matTable: MatTable<Result>;
+  @ViewChild(MatTable) matTable: MatTable<Result>;
 
   constructor(
     private readonly gatewayService: GatewayService
