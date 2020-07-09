@@ -1,1 +1,10 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="1em">
+  <h1>Public IPFS Cacher</h1>
+
+  <!-- Theme Switcher -->
+  <button mat-icon-button="">
+    <mat-icon (click)="themeService.switchTheme()">{{themeService.icon}}</mat-icon>
+  </button>
+
+</mat-toolbar>
 <router-outlet></router-outlet>

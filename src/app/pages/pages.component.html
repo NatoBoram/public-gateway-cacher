@@ -1,12 +1,10 @@
 <div class="container" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="1em">
 
-  <h1>Public IPFS Cacher</h1>
-
   <!-- IPFS -->
   <form fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="1em">
 
     <!-- Hash -->
-    <mat-form-field>
+    <mat-form-field [color]="inputColour">
       <mat-label>IPFS</mat-label>
       <input name="ipfs" [(ngModel)]="ipfs" matInput>
     </mat-form-field>
@@ -20,7 +18,7 @@
   <form fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="1em">
 
     <!-- Hash -->
-    <mat-form-field>
+    <mat-form-field [color]="inputColour">
       <mat-label>IPNS</mat-label>
       <input name="ipns" [(ngModel)]="ipns" matInput>
     </mat-form-field>
@@ -30,7 +28,8 @@
 
   </form>
 
-  <mat-progress-bar [value]="dataSource.data.length / gateways.length * 100" *ngIf="subscriptions.length" mode="determinate">
+  <mat-progress-bar [value]="dataSource.data.length / gateways.length * 100" *ngIf="subscriptions.length" mode="determinate"
+    color="primary">
   </mat-progress-bar>
 
   <table class="mat-elevation-z8" [dataSource]="dataSource" mat-table>
@@ -47,15 +46,15 @@
     <ng-container matColumnDef="gateway">
       <th mat-header-cell *matHeaderCellDef> Gateway </th>
       <td mat-cell *matCellDef="let element">
-        <div [ngSwitch]="element.error">
-          <div *ngSwitchCase="null">
+        <div [ngSwitch]="element.ok">
+          <div *ngSwitchCase="true">
             <strong>
               <a class="aqua" href="{{ element.gateway }}#x-ipfs-companion-no-redirect" target="_blank">
                 {{ element.gateway }}
               </a>
             </strong>
           </div>
-          <div *ngSwitchDefault>
+          <div *ngSwitchCase="false">
             <a class="aqua-muted" href="{{ element.gateway }}#x-ipfs-companion-no-redirect" target="_blank">
               {{ element.gateway }}
             </a>

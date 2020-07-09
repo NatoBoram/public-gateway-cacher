@@ -1,0 +1,4 @@
+@import 'ipfs-palettes.scss';
+
+$ipfs-light-theme: mat-light-theme($ipfs-primary, $ipfs-accent, $ipfs-warn);
+$ipfs-dark-theme: mat-dark-theme($ipfs-primary, $ipfs-accent, $ipfs-warn);

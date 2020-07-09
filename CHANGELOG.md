@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Support for subdomain gateways
 - Strict mode
 - More icons
+- IPFS colours
 
 ### Changed
 

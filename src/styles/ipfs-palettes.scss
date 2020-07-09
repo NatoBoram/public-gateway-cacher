@@ -1,0 +1,5 @@
+@import 'ipfs-colours.scss';
+
+$ipfs-primary: mat-palette($ipfs-colour-navy, 'default', 'lighter', 'darker');
+$ipfs-accent: mat-palette($ipfs-colour-aqua, 'default', 'lighter', 'darker');
+$ipfs-warn: mat-palette($ipfs-colour-yellow, 'default', 'lighter', 'darker');

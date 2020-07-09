@@ -1,0 +1,23 @@
+$ipfs-colour-navy: (default: #0B3A53,
+  lighter: #3e6480,
+  darker: #00142a,
+  contrast: (default: $light-primary-text,
+    lighter: $light-primary-text,
+    darker: $light-primary-text,
+  ));
+
+$ipfs-colour-aqua: (default: #69c5cd,
+  lighter: #9df8ff,
+  darker: #32949c,
+  contrast: (default: $dark-primary-text,
+    lighter: $dark-primary-text,
+    darker: $dark-primary-text,
+  ));
+
+$ipfs-colour-yellow: (default: #f39021,
+  lighter: #ffc155,
+  darker: #bb6200,
+  contrast: (default: $dark-primary-text,
+    lighter: $dark-primary-text,
+    darker: $dark-primary-text,
+  ));
