@@ -27,14 +27,14 @@ export class ThemeService {
   }
 
   switchTheme(): void {
-    this.setTheme(this.current === Theme.Light ? Theme.Dark : Theme.Light)
+    this.setTheme(this.current === Theme.Light ? Theme.Dark : Theme.Light);
   }
 
   setTheme(theme: Theme): void {
-    document.querySelector('body')?.classList.remove(this.current)
-    document.querySelector('body')?.classList.add(theme)
+    document.querySelector('body')?.classList.remove(this.current);
+    document.querySelector('body')?.classList.add(theme);
     this.current = theme;
-    this.icon = this.getIcon(theme)
+    this.icon = this.getIcon(theme);
     this.subject$.next(theme);
     localStorage.setItem('theme', theme);
   }
