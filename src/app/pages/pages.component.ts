@@ -113,7 +113,7 @@ export class PagesComponent implements OnInit, OnDestroy {
   }
 
   private getIcon(status: number): string {
-    if (status >= 200 && status < 300) return '✅';
+    if (status >= 200 && status < 300) { return '✅'; }
     switch (status) {
       case 0: return '❌';
       case 403: return '⛔';

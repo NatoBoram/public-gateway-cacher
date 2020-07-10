@@ -1,6 +1,10 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "packageManager": "yarn",
+    "analytics": "10b848ad-8b81-4346-852f-5eff89573a85"
+  },
   "newProjectRoot": "projects",
   "projects": {
     "public-gateway-cacher": {
@@ -187,9 +191,5 @@
       }
     }
   },
-  "defaultProject": "public-gateway-cacher",
-  "cli": {
-    "packageManager": "yarn",
-    "analytics": "10b848ad-8b81-4346-852f-5eff89573a85"
-  }
+  "defaultProject": "public-gateway-cacher"
 }

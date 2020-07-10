@@ -23,7 +23,7 @@ export class GatewayService {
       return this.http.get<string[]>(`${base.href}/assets/json/gateways.json`);
     }
 
-    throw new Error('Couldn\'t find environment nor base.')
+    throw new Error('Couldn\'t find environment nor base.');
   }
 
   get(gateway: string, protocol: Protocol, hashpath: string): Observable<HttpResponse<string>> {
