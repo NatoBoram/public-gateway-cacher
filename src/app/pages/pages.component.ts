@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, EventEmitter, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -19,7 +20,7 @@ export class PagesComponent implements OnInit, OnDestroy {
   @ViewChild(MatTable) matTable!: MatTable<Result>;
 
   gateways!: string[];
-  inputColour = 'primary';
+  inputColour: ThemePalette = 'primary';
   ipfs = '';
   ipns = '';
 
