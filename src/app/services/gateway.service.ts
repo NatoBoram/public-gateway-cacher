@@ -14,16 +14,11 @@ export class GatewayService {
   ) { }
 
   list(): Observable<string[]> {
-    if (environment && environment.base_href !== '/') {
-      return this.http.get<string[]>(`${environment.base_href}/assets/json/gateways.json`);
-    }
-
-    const base = document.querySelector('base');
-    if (base) {
-      return this.http.get<string[]>(`${base.href}/assets/json/gateways.json`);
-    }
-
-    throw new Error('Couldn\'t find environment nor base.');
+    return this.http.get<string[]>(
+      environment.base_href && environment.base_href !== '/'
+        ? `${environment.base_href}/assets/json/gateways.json`
+        : `${document.querySelector('base')?.href}assets/json/gateways.json`
+    );
   }
 
   get(gateway: string, protocol: Protocol, hashpath: string): Observable<HttpResponse<string>> {
