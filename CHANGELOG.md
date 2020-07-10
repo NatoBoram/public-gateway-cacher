@@ -8,6 +8,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.1.0] - 2020-07-10
+
+### Added
+
 - Support for subdomain gateways
 - Strict mode
 - More icons
@@ -19,14 +33,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Upgraded to Angular 10
 - Now uses `--chunker=buzhash`
 - Updated `bootstrap` and `ipfs-css`
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [2.0.0] - 2019-12-03
 
