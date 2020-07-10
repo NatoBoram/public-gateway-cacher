@@ -146,7 +146,7 @@
     "no-forward-ref": true,
     "no-host-metadata-property": true,
     "no-implicit-dependencies": [
-      true,
+      false,
       "dev"
     ],
     "no-import-side-effect": [
