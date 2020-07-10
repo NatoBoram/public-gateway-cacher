@@ -118,7 +118,7 @@ export class PagesComponent implements OnInit, OnDestroy {
       case 403: return '⛔';
       case 404: return '❓';
       case 500: return '❗';
-      default: return environment.production ? '❌' : '🤦‍♂️';
+      default: return environment.production ? '❌' : '❔';
     }
   }
 
