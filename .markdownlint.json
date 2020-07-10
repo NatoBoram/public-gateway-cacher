@@ -1,4 +1,6 @@
 {
-  "line-length": false,
+  "line-length": {
+    "line_length": 140
+  },
   "no-duplicate-heading": false
 }

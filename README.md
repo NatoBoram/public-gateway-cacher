@@ -11,7 +11,8 @@ You can view this website on [GitLab Pages](https://natoboram.gitlab.io/public-g
 
 **NOTE :** All of these (except `ipfs.io` and `dweb.link`) are hosted by third-parties and should be treated as such.
 
-If you'd like to add a new public gateway, please go to [github.com/ipfs/public-gateway-checker](https://github.com/ipfs/public-gateway-checker), submit a pull request then open an issue [here](https://gitlab.com/NatoBoram/public-gateway-cacher/issues/new).
+If you'd like to add a new public gateway, please go to
+[github.com/ipfs/public-gateway-checker](https://github.com/ipfs/public-gateway-checker), submit a pull request then open an issue [here](https://gitlab.com/NatoBoram/public-gateway-cacher/issues/new).
 
 ## Angular
 
