@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Fixed
 
+- Corrected the title from "Public IPFS Cacher" to "Public Gateway Cacher".
+
 ### Security
 
 ## [2.1.0] - 2020-07-10
