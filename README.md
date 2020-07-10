@@ -1,14 +1,15 @@
 # Public Gateway Cacher
 
+[![pipeline status](https://gitlab.com/NatoBoram/public-gateway-cacher/badges/master/pipeline.svg)](https://gitlab.com/NatoBoram/public-gateway-cacher/-/commits/master)
+[![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/NatoBoram/public-gateway-cacher)
+
 Cache a specific hash on a bunch of public gateways.
 
-**Note :** All of these (except gateway.ipfs.io and ipfs.io) are hosted by third-parties and should be treated as such.
+You can view this website on [GitLab Pages](https://natoboram.gitlab.io/public-gateway-cacher) and [IPFS](https://bafybeic4brgje76b5tv4g3qoux7vfxrolng2kmygigfq3ugubq7peae7ke.ipfs.dweb.link).
 
-You can view this website on [IPFS](https://bafybeibjf6z3sxavox6uahfl4vogkuenimlpvn4eghdv6mtsm55rpnalve.cf-ipfs.com).
+![Screenshot](https://bafybeie7txrbzw6ipb62lplnpzsjpz7s4o5q7uufb5rjfelol2cuxeyzye.ipfs.dweb.link/Screenshot_2020-07-09%20Public%20Gateway%20Cacher.png)
 
-Here's a screenshot :
-
-![screenshot](https://bafybeicfvbezkavmric3lc2c4hmgul7h7egva4btezs5hu2fj2ly4dttvq.cf-ipfs.com/Screenshot_2019-12-03%20Public%20Gateway%20Cacher.png)
+**NOTE :** All of these (except `ipfs.io` and `dweb.link`) are hosted by third-parties and should be treated as such.
 
 If you'd like to add a new public gateway, please go to [github.com/ipfs/public-gateway-checker](https://github.com/ipfs/public-gateway-checker), submit a pull request then open an issue [here](https://gitlab.com/NatoBoram/public-gateway-cacher/issues/new).
 
