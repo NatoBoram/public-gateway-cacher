@@ -6,16 +6,19 @@
     "angular.ng-template",
     "davidanson.vscode-markdownlint",
     "editorconfig.editorconfig",
+    "gitlab.gitlab-workflow",
     "hookyqr.beautify",
     "johnpapa.angular2",
-    "ms-vscode.typescript-javascript-grammar",
     "ms-vscode.vscode-typescript-next",
     "ms-vscode.vscode-typescript-tslint-plugin",
     "msjsdiag.debugger-for-chrome",
-    "visualstudioexptteam.vscodeintellicode",
+    "visualstudioexptteam.vscodeintellicode"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": [
     "eg2.tslint",
+    "ms-azuretools.vscode-docker",
+    "ms-edgedevtools.vscode-edge-devtools",
+    "ms-vscode-remote.remote-wsl"
   ]
 }
