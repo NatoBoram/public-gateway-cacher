@@ -32,11 +32,11 @@
     color="primary">
   </mat-progress-bar>
 
-  <table class="mat-elevation-z8" [dataSource]="dataSource" mat-table>
+  <table class="mat-elevation-z8" [dataSource]="dataSource" mat-table aria-label="List of IPFS gateways and their statuses.">
 
     <!-- Result Column -->
     <ng-container matColumnDef="icon">
-      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <th mat-header-cell *matHeaderCellDef scope="col"> Status </th>
       <td mat-cell *matCellDef="let element">
         <span [matTooltip]="element.message"> {{ element.icon }} </span>
       </td>
@@ -44,7 +44,7 @@
 
     <!-- Gateway Column -->
     <ng-container matColumnDef="gateway">
-      <th mat-header-cell *matHeaderCellDef> Gateway </th>
+      <th mat-header-cell *matHeaderCellDef scope="col"> Gateway </th>
       <td mat-cell *matCellDef="let element">
         <div [ngSwitch]="element.ok">
           <div *ngSwitchCase="true">

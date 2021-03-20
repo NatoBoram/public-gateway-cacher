@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Added
 
+- Added some accessibility tags
+
 ### Changed
 
 - Updated to Angular 11
