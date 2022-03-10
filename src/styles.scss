@@ -1,12 +1,12 @@
 // Custom Theming for Angular Material
+@use '~@angular/material' as mat;
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core();
+@include mat.core();
 
 // // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -28,11 +28,11 @@
 @import 'styles/ipfs-themes.scss';
 
 .theme-light {
-  @include angular-material-theme($ipfs-light-theme);
+  @include mat.all-component-themes($ipfs-light-theme);
 }
 
 .theme-dark {
-  @include angular-material-theme($ipfs-dark-theme);
+  @include mat.all-component-themes($ipfs-dark-theme);
 }
 
 /* You can add global styles to this file, and also import other style files */
