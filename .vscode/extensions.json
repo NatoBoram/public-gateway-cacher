@@ -5,13 +5,12 @@
   "recommendations": [
     "angular.ng-template",
     "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
     "gitlab.gitlab-workflow",
-    "hookyqr.beautify",
     "johnpapa.angular2",
     "ms-vscode.vscode-typescript-next",
-    "ms-vscode.vscode-typescript-tslint-plugin",
-    "visualstudioexptteam.vscodeintellicode"
+    "visualstudioexptteam.vscodeintellicode",
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": [

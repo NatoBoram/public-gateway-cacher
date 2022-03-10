@@ -15,6 +15,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 * Upgraded to Angular 12
 * Upgraded TSLint rules
 * Updated `gateways.json`
+* Upgraded to Angular 13
+* Changed to ESLint
 
 ### Deprecated
 

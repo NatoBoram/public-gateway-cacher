@@ -3,7 +3,8 @@
   "version": 1,
   "cli": {
     "packageManager": "yarn",
-    "analytics": "10b848ad-8b81-4346-852f-5eff89573a85"
+    "analytics": "10b848ad-8b81-4346-852f-5eff89573a85",
+    "defaultCollection": "@angular-eslint/schematics"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -164,6 +165,15 @@
             "production": {
               "devServerTarget": "public-gateway-cacher:serve:production"
             }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
