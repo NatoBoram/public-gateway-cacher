@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Added
 
+* More information in the `package.json`.
+
 ### Changed
 
 * Upgraded to Angular 12
