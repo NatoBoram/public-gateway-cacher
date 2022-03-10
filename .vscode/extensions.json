@@ -11,7 +11,6 @@
     "johnpapa.angular2",
     "ms-vscode.vscode-typescript-next",
     "ms-vscode.vscode-typescript-tslint-plugin",
-    "msjsdiag.debugger-for-chrome",
     "visualstudioexptteam.vscodeintellicode"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.

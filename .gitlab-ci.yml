@@ -3,6 +3,10 @@ image: node:14
 before_script:
   - yarn
 
+variables:
+  # https://stackoverflow.com/a/69746937/5083247
+  NODE_OPTIONS: --openssl-legacy-provider
+
 cache:
   key:
     files:
