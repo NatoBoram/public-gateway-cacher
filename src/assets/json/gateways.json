@@ -58,7 +58,7 @@
   "https://ipfs.eth.aragon.network/:type/:hash",
   "https://ipfs.smartholdem.io/:type/:hash",
   "https://ipfs.xoqq.ch/:type/:hash",
-  "http://natoboram.mynetgear.com:8080/:type/:hash",
+  "https://natoboram.mynetgear.com/:type/:hash",
   "https://video.oneloveipfs.com/:type/:hash",
   "http://ipfs.anonymize.com/:type/:hash",
   "https://ipfs.taxi/:type/:hash",

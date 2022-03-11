@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Security
 
+## [2.2.1]
+
+### Changed
+
+- Updated my own gateway to its HTTPS link
+
 ## [2.2.0] - 2022-03-11
 
 ### Added

@@ -1,6 +1,6 @@
 {
   "name": "public-gateway-cacher",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Cache a specific hash on a bunch of public gateways.",
   "keywords": [
     "IPFS"

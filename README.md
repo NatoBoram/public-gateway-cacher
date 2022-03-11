@@ -5,7 +5,7 @@
 
 Cache a specific hash on a bunch of public gateways.
 
-You can view this website on [GitLab Pages](https://natoboram.gitlab.io/public-gateway-cacher) and [IPFS](https://bafybeigmtv32yzjryuv5uwfhzqtrjt6va7dwaxuvhoqqirkwcg2q6mlai4.ipfs.dweb.link).
+You can view this website on [GitLab Pages](https://natoboram.gitlab.io/public-gateway-cacher) and [IPFS](https://bafybeievsdzxuvuah5t6vzhig525jecp7wmupnm7olxdkonqmte57zoqf4.ipfs.dweb.link).
 
 ![Screenshot](https://bafybeie7txrbzw6ipb62lplnpzsjpz7s4o5q7uufb5rjfelol2cuxeyzye.ipfs.dweb.link/Screenshot_2020-07-09%20Public%20Gateway%20Cacher.png)
 
