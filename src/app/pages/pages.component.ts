@@ -87,7 +87,7 @@ export class PagesComponent implements OnInit, OnDestroy {
           .pipe(takeUntil(this.destroy$))
           .subscribe(
             (resp): void => {
-              this.dataSource.data.push({
+              this.dataSource.data.unshift({
                 gateway: this.gatewayService.url(gateway, protocol, hashpath),
                 message: resp.statusText,
                 icon: this.getIcon(resp.status),

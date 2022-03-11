@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 - More information in the `package.json`.
 - Added ESLint
+- Added Prettier
+- Put success reponses at the top of the list
 
 ### Changed
 
