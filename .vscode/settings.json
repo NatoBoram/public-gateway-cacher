@@ -14,7 +14,7 @@
       ".html"
     ]
   },
-  "eslint.packageManager": "yarn",
+  "eslint.packageManager": "pnpm",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -29,8 +29,8 @@
   "html.format.maxPreserveNewLines": 1,
   "html.format.wrapAttributes": "auto",
   "html.format.wrapLineLength": 140,
-  "npm.packageManager": "yarn",
-  "tslint.packageManager": "yarn",
+  "npm.packageManager": "pnpm",
+  "tslint.packageManager": "pnpm",
   "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.updateImportsOnFileMove.enabled": "always"

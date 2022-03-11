@@ -33,7 +33,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish:ipfs": "yarn run build:ipfs && ipfs add --recursive --chunker=buzhash --cid-version=1 dist/angular",
+    "publish:ipfs": "pnpm run build:ipfs && ipfs add --recursive --chunker=buzhash --cid-version=1 dist/angular",
     "postinstall": "ngcc"
   },
   "dependencies": {

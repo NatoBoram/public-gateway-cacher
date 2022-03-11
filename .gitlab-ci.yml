@@ -1,7 +1,9 @@
 image: node:latest
 
 before_script:
-  - yarn
+  - curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6
+  - pnpm config set store-dir .pnpm-store
+  - pnpm i
 
 variables:
   # https://stackoverflow.com/a/69746937/5083247
@@ -10,15 +12,14 @@ variables:
 cache:
   key:
     files:
-      - package.json
-      - yarn.lock
+      - pnpm-lock.yaml
   paths:
-    - node_modules
+    - .pnpm-store
 
 build:
   stage: build
   script:
-    - yarn run build:prod
+    - pnpm run build:prod
   artifacts:
     paths:
       - dist/angular
@@ -26,12 +27,12 @@ build:
 test:
   stage: test
   script:
-    - yarn run lint
+    - pnpm run lint
 
 pages:
   stage: deploy
   script:
-    - yarn run build:gitlab
+    - pnpm run build:gitlab
     - mv dist/angular public
     - cp public/index.html public/404.html
   artifacts:
