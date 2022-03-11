@@ -1,24 +1,27 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { PagesComponent } from './pages.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing'
+import type { ComponentFixture } from '@angular/core/testing'
+import { TestBed, waitForAsync } from '@angular/core/testing'
+import { PagesComponent } from './pages.component'
 
 describe('PagesComponent', (): void => {
-  let component: PagesComponent;
-  let fixture: ComponentFixture<PagesComponent>;
+  let component: PagesComponent
+  let fixture: ComponentFixture<PagesComponent>
 
   beforeEach(waitForAsync((): void => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [PagesComponent]
     })
-      .compileComponents();
-  }));
+      .compileComponents()
+  }))
 
   beforeEach((): void => {
-    fixture = TestBed.createComponent(PagesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(PagesComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', (): void => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})

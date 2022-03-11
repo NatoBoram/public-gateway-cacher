@@ -1,5 +1,8 @@
 {
   "root": true,
+  "env": {
+    "browser": true
+  },
   "ignorePatterns": [
     "projects/**/*"
   ],
@@ -17,6 +20,7 @@
       },
       "extends": [
         "plugin:@angular-eslint/all",
+        "plugin:@angular-eslint/recommended--extra",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
@@ -35,8 +39,94 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
         // Custom rules
+        // @typescript-eslint
+        "@typescript-eslint/array-type": "error",
+        "@typescript-eslint/class-literal-property-style": "error",
+        "@typescript-eslint/consistent-indexed-object-style": "error",
+        "@typescript-eslint/consistent-type-assertions": [
+          "error",
+          {
+            "assertionStyle": "as",
+            "objectLiteralTypeAssertions": "never"
+          }
+        ],
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/consistent-type-imports": "error",
+        "@typescript-eslint/dot-notation": "error",
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "no-public"
+          }
+        ],
+        "@typescript-eslint/member-delimiter-style": [
+          "error",
+          {
+            "multiline": {
+              "delimiter": "none",
+              "requireLast": true
+            }
+          }
+        ],
+        "@typescript-eslint/method-signature-style": "error",
+        "@typescript-eslint/no-base-to-string": "error",
+        "@typescript-eslint/no-confusing-non-null-assertion": "error",
+        "@typescript-eslint/no-confusing-void-expression": [
+          "error",
+          {
+            "ignoreArrowShorthand": true,
+            "ignoreVoidOperator": true
+          }
+        ],
+        "@typescript-eslint/no-dynamic-delete": "error",
+        "@typescript-eslint/no-empty-function": [
+          "error",
+          {
+            "allow": [
+              "private-constructors",
+              "protected-constructors"
+            ]
+          }
+        ],
+        "@typescript-eslint/no-extra-parens": [
+          "error",
+          "functions"
+        ],
+        "@typescript-eslint/no-implicit-any-catch": "error",
+        "@typescript-eslint/no-invalid-void-type": "error",
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+        "@typescript-eslint/no-unnecessary-condition": "error",
+        "@typescript-eslint/no-unnecessary-qualifier": "error",
+        "@typescript-eslint/no-unnecessary-type-arguments": "error",
+        "@typescript-eslint/no-unnecessary-type-constraint": "error",
+        "@typescript-eslint/no-unsafe-argument": "error",
+        "@typescript-eslint/no-unsafe-assignment": "error",
+        "@typescript-eslint/no-var-requires": "error",
+        "@typescript-eslint/non-nullable-type-assertion-style": "error",
+        "@typescript-eslint/prefer-for-of": "error",
+        "@typescript-eslint/prefer-function-type": "error",
+        "@typescript-eslint/prefer-includes": "error",
+        "@typescript-eslint/prefer-nullish-coalescing": "error",
+        "@typescript-eslint/prefer-optional-chain": "error",
+        "@typescript-eslint/prefer-readonly": "error",
+        "@typescript-eslint/prefer-reduce-type-parameter": "error",
+        "@typescript-eslint/prefer-return-this-type": "error",
+        "@typescript-eslint/prefer-string-starts-ends-with": "error",
+        "@typescript-eslint/prefer-ts-expect-error": "error",
+        "@typescript-eslint/promise-function-async": "error",
+        "@typescript-eslint/require-array-sort-compare": "error",
+        "@typescript-eslint/semi": [
+          "error",
+          "never"
+        ],
+        "@typescript-eslint/sort-type-union-intersection-members": "error",
+        "@typescript-eslint/switch-exhaustiveness-check": "error",
+        "@typescript-eslint/type-annotation-spacing": "error",
+        "@typescript-eslint/unified-signatures": "error"
       }
     },
     {

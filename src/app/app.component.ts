@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ThemeService } from './services/theme.service';
+import { ChangeDetectionStrategy, Component, Inject } from '@angular/core'
+import { ThemeService } from './services/theme.service'
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,6 @@ import { ThemeService } from './services/theme.service';
 })
 export class AppComponent {
   constructor(
-    public readonly themeService: ThemeService
+    @Inject(ThemeService) readonly themeService: ThemeService
   ) { }
 }

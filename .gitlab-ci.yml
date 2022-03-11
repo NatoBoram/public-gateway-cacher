@@ -24,10 +24,15 @@ build:
     paths:
       - dist/angular
 
-test:
+lint:
   stage: test
   script:
     - pnpm run lint
+
+test:
+  stage: test
+  script:
+    - pnpm run test
 
 pages:
   stage: deploy
