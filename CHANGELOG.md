@@ -8,6 +8,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.2.0] - 2022-03-11
+
+### Added
+
 - More information in the `package.json`.
 - Added ESLint
 - Added Prettier
@@ -19,15 +33,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Upgraded to Angular 13
 - Targets ESNext
 
-### Deprecated
-
 ### Removed
 
 - Removed TSLint
-
-### Fixed
-
-### Security
 
 ## [2.1.1] - 2021-03-20
 
