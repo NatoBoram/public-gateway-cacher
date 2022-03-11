@@ -10,6 +10,6 @@ describe('GatewayService', (): void => {
 
   it('should be created', (): void => {
     const service: GatewayService = TestBed.inject(GatewayService)
-    expect(service).toBeTruthy()
+    void expect(service).toBeTruthy()
   })
 })

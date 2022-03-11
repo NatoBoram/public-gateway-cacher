@@ -8,7 +8,7 @@ describe('PagesComponent', (): void => {
   let fixture: ComponentFixture<PagesComponent>
 
   beforeEach(waitForAsync((): void => {
-    TestBed.configureTestingModule({
+    void TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       declarations: [PagesComponent]
     })
@@ -22,6 +22,6 @@ describe('PagesComponent', (): void => {
   })
 
   it('should create', (): void => {
-    expect(component).toBeTruthy()
+    void expect(component).toBeTruthy()
   })
 })

@@ -18,7 +18,7 @@ export class GatewayService {
     return this.http.get<string[]>(
       environment.base_href && environment.base_href !== '/'
         ? `${environment.base_href}/assets/json/gateways.json`
-        : `${document.querySelector('base')?.href}assets/json/gateways.json`
+        : `${document.querySelector('base')?.href ?? ''}assets/json/gateways.json`
     )
   }
 

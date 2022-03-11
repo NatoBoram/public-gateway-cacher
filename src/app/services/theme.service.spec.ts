@@ -10,6 +10,6 @@ describe('ThemeService', (): void => {
   })
 
   it('should be created', (): void => {
-    expect(service).toBeTruthy()
+    void expect(service).toBeTruthy()
   })
 })

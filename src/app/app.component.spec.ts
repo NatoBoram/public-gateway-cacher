@@ -4,7 +4,7 @@ import { AppComponent } from './app.component'
 
 describe('AppComponent', (): void => {
   beforeEach(waitForAsync((): void => {
-    TestBed.configureTestingModule({
+    void TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
       ],
@@ -19,7 +19,7 @@ describe('AppComponent', (): void => {
     if (!(fixture.debugElement.componentInstance instanceof AppComponent)) throw new Error("Expected AppComponent")
 
     const app: AppComponent = fixture.debugElement.componentInstance
-    expect(app).toBeTruthy()
+    void expect(app).toBeTruthy()
   })
 
   it(`should have a themeService`, (): void => {
@@ -27,7 +27,7 @@ describe('AppComponent', (): void => {
     if (!(fixture.debugElement.componentInstance instanceof AppComponent)) throw new Error("Expected AppComponent")
 
     const app: AppComponent = fixture.debugElement.componentInstance
-    expect(app.themeService).toBeTruthy()
+    void expect(app.themeService).toBeTruthy()
   })
 
   it('should render title', (): void => {
@@ -36,10 +36,10 @@ describe('AppComponent', (): void => {
     if (!isHTMLElement(fixture.debugElement.nativeElement)) throw new Error("Expected HTMLElement")
 
     const compiled: HTMLElement = fixture.debugElement.nativeElement
-    expect(compiled.querySelector('h1')?.textContent).toContain('Public Gateway Cacher')
+    void expect(compiled.querySelector('h1')?.textContent).toContain('Public Gateway Cacher')
   })
 })
 
-function isHTMLElement(element: any): element is HTMLElement {
-  return element.__proto__ instanceof HTMLElement
+function isHTMLElement(element: unknown): element is HTMLElement {
+  return Object.getPrototypeOf(element) instanceof HTMLElement
 }
