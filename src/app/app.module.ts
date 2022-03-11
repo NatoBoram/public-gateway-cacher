@@ -15,14 +15,12 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
     AppRoutingModule,
-
-    // Material
+    BrowserAnimationsModule,
+    BrowserModule,
+    CommonModule,
     FlexLayoutModule,
+    HttpClientModule,
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,

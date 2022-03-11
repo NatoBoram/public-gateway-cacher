@@ -1,11 +1,26 @@
 {
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
+    "source.fixAll.eslint": true,
     "source.organizeImports": true
   },
   "editor.formatOnSave": true,
   "editor.rulers": [
     140
+  ],
+  "eslint.options": {
+    "extensions": [
+      ".ts",
+      ".html"
+    ]
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
   ],
   "files.associations": {
     ".ipfs-npmrc": "json"

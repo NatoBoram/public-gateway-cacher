@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, EventEmitter, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
@@ -13,7 +13,8 @@ import { ThemeService } from '../services/theme.service';
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
-  styleUrls: ['./pages.component.scss']
+  styleUrls: ['./pages.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PagesComponent implements OnInit, OnDestroy {
 
