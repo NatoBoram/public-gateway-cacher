@@ -1,4 +1,4 @@
 export enum Protocol {
-  IPFS = 'ipfs',
-  IPNS = 'ipns',
+  IPFS = "ipfs",
+  IPNS = "ipns",
 }

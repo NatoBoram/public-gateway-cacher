@@ -1,5 +1,5 @@
 // Custom Theming for Angular Material
-@use '@angular/material'as mat;
+@use "@angular/material" as mat;
 // For more information: https://material.angular.io/guide/theming
 // Plus imports for other components in your app.
 
@@ -25,7 +25,7 @@
 // // that you are using.
 // @include angular-material-theme($public-gateway-cacher-theme);
 
-@import 'styles/ipfs-themes.scss';
+@import "styles/ipfs-themes.scss";
 
 .theme-light {
   @include mat.all-component-themes($ipfs-light-theme);
@@ -47,5 +47,5 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-@import '~bootstrap/scss/bootstrap-grid.scss';
-@import '~ipfs-css/theme.scss';
+@import "~bootstrap/scss/bootstrap-grid.scss";
+@import "~ipfs-css/theme.scss";

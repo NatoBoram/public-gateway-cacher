@@ -27,7 +27,8 @@ build:
 test:
   stage: test
   script:
-    - pnpm run lint
+    - pnpx ng lint
+    - pnpx prettier --check .
 
 pages:
   stage: deploy

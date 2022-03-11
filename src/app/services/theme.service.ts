@@ -1,25 +1,24 @@
-import { Injectable } from '@angular/core'
-import type { Observable } from 'rxjs'
-import { Subject } from 'rxjs'
-import { Theme } from '../enums/theme.enum'
+import { Injectable } from "@angular/core"
+import type { Observable } from "rxjs"
+import { Subject } from "rxjs"
+import { Theme } from "../enums/theme.enum"
 
 function enumGuard<T>(enumeration: T): (token: unknown) => token is T[keyof T] {
   return (token: unknown): token is T[keyof T] => Object.values(enumeration).includes(token)
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class ThemeService {
-
   current = Theme.Light
-  icon = 'brightness_low'
+  icon = "brightness_low"
   readonly valueChanges: Observable<Theme>
 
   private readonly subject$ = new Subject<Theme>()
 
   constructor() {
-    const stored = localStorage.getItem('theme')
+    const stored = localStorage.getItem("theme")
     if (enumGuard(Theme)(stored)) {
       this.setTheme(stored)
     }
@@ -32,19 +31,21 @@ export class ThemeService {
   }
 
   setTheme(theme: Theme): void {
-    document.querySelector('body')?.classList.remove(this.current)
-    document.querySelector('body')?.classList.add(theme)
+    document.querySelector("body")?.classList.remove(this.current)
+    document.querySelector("body")?.classList.add(theme)
     this.current = theme
     this.icon = this.getIcon(theme)
     this.subject$.next(theme)
-    localStorage.setItem('theme', theme)
+    localStorage.setItem("theme", theme)
   }
 
   getIcon(theme: Theme): string {
     switch (theme) {
-      case Theme.Dark: return 'brightness_high'
+      case Theme.Dark:
+        return "brightness_high"
       case Theme.Light:
-      default: return 'brightness_low'
+      default:
+        return "brightness_low"
     }
   }
 }

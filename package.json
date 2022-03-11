@@ -31,7 +31,9 @@
     "build:gitlab": "ng build --configuration=gitlab --base-href /public-gateway-cacher/",
     "build:ipfs": "ng build --configuration=ipfs",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "ng lint --fix",
+    "eslint": "eslint --fix .",
+    "prettier": "prettier --write .",
     "e2e": "ng e2e",
     "publish:ipfs": "pnpm run build:ipfs && ipfs add --recursive --chunker=buzhash --cid-version=1 dist/angular",
     "postinstall": "ngcc"
@@ -70,6 +72,9 @@
     "@typescript-eslint/eslint-plugin": "5.14.0",
     "@typescript-eslint/parser": "5.14.0",
     "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-rxjs": "^5.0.2",
+    "eslint-plugin-rxjs-angular": "^2.0.0",
     "jasmine-core": "~4.0.1",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.3.17",
@@ -77,6 +82,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "prettier": "^2.5.1",
     "protractor": "~7.0.0",
     "ts-node": "~10.7.0",
     "typescript": "~4.5.5"

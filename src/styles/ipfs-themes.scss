@@ -1,5 +1,5 @@
-@use '@angular/material'as mat;
-@import 'ipfs-palettes.scss';
+@use "@angular/material" as mat;
+@import "ipfs-palettes.scss";
 
 $ipfs-light-theme: mat.define-light-theme($ipfs-primary, $ipfs-accent, $ipfs-warn);
 $ipfs-dark-theme: mat.define-dark-theme($ipfs-primary, $ipfs-accent, $ipfs-warn);

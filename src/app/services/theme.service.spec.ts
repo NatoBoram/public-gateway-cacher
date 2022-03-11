@@ -1,7 +1,7 @@
-import { TestBed } from '@angular/core/testing'
-import { ThemeService } from './theme.service'
+import { TestBed } from "@angular/core/testing"
+import { ThemeService } from "./theme.service"
 
-describe('ThemeService', (): void => {
+describe("ThemeService", (): void => {
   let service: ThemeService
 
   beforeEach((): void => {
@@ -9,7 +9,7 @@ describe('ThemeService', (): void => {
     service = TestBed.inject(ThemeService)
   })
 
-  it('should be created', (): void => {
+  it("should be created", (): void => {
     void expect(service).toBeTruthy()
   })
 })

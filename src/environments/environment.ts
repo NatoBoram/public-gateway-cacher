@@ -1,4 +1,4 @@
-import type { Environment } from '../app/interfaces/environment'
+import type { Environment } from "../app/interfaces/environment"
 
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
@@ -6,7 +6,7 @@ import type { Environment } from '../app/interfaces/environment'
 
 export const environment: Environment = {
   production: false,
-  base_href: '/',
+  base_href: "/",
   useHash: false,
 }
 

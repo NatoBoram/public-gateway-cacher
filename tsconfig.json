@@ -30,10 +30,7 @@
     "importHelpers": true,
     "target": "ESNext",
     "module": "ESNext",
-    "lib": [
-      "ESNext",
-      "DOM"
-    ]
+    "lib": ["ESNext", "DOM"]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

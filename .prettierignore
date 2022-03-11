@@ -1,8 +1,6 @@
 .angular
 .pnpm-store
 dist
-e2e/protractor.conf.js
 node_modules
 pnpm-lock.yaml
 public
-src/test.ts

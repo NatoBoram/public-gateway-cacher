@@ -1,4 +1,3 @@
-# Editor configuration, see https://editorconfig.org
 root = true
 
 [*]
@@ -9,8 +8,6 @@ insert_final_newline = true
 max_line_length = 140
 trim_trailing_whitespace = true
 
-[*.ts]
-quote_type = single
-
 [*.md]
+max_line_length = false
 trim_trailing_whitespace = false

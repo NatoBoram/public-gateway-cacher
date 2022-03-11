@@ -1,6 +1,6 @@
-@use '@angular/material'as mat;
-@import 'ipfs-colours.scss';
+@use "@angular/material" as mat;
+@import "ipfs-colours.scss";
 
-$ipfs-primary: mat.define-palette($ipfs-colour-navy, 'default', 'lighter', 'darker');
-$ipfs-accent: mat.define-palette($ipfs-colour-aqua, 'default', 'lighter', 'darker');
-$ipfs-warn: mat.define-palette($ipfs-colour-yellow, 'default', 'lighter', 'darker');
+$ipfs-primary: mat.define-palette($ipfs-colour-navy, "default", "lighter", "darker");
+$ipfs-accent: mat.define-palette($ipfs-colour-aqua, "default", "lighter", "darker");
+$ipfs-warn: mat.define-palette($ipfs-colour-yellow, "default", "lighter", "darker");

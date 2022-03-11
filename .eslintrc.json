@@ -3,24 +3,21 @@
   "env": {
     "browser": true
   },
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
-        "project": [
-          "tsconfig.json",
-          "e2e/tsconfig.json"
-        ],
+        "project": ["tsconfig.json", "e2e/tsconfig.json"],
         "createDefaultProgram": true
       },
+      "plugins": ["rxjs-angular"],
       "extends": [
+        "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "prettier",
+        "plugin:rxjs/recommended",
         "plugin:@angular-eslint/all",
         "plugin:@angular-eslint/recommended--extra",
         "plugin:@angular-eslint/template/process-inline-templates"
@@ -87,16 +84,10 @@
         "@typescript-eslint/no-empty-function": [
           "error",
           {
-            "allow": [
-              "private-constructors",
-              "protected-constructors"
-            ]
+            "allow": ["private-constructors", "protected-constructors"]
           }
         ],
-        "@typescript-eslint/no-extra-parens": [
-          "error",
-          "functions"
-        ],
+        "@typescript-eslint/no-extra-parens": ["error", "functions"],
         "@typescript-eslint/no-implicit-any-catch": "error",
         "@typescript-eslint/no-invalid-void-type": "error",
         "@typescript-eslint/no-non-null-assertion": "error",
@@ -121,23 +112,19 @@
         "@typescript-eslint/prefer-ts-expect-error": "error",
         "@typescript-eslint/promise-function-async": "error",
         "@typescript-eslint/require-array-sort-compare": "error",
-        "@typescript-eslint/semi": [
-          "error",
-          "never"
-        ],
+        "@typescript-eslint/semi": ["error", "never"],
         "@typescript-eslint/sort-type-union-intersection-members": "error",
         "@typescript-eslint/switch-exhaustiveness-check": "error",
         "@typescript-eslint/type-annotation-spacing": "error",
-        "@typescript-eslint/unified-signatures": "error"
+        "@typescript-eslint/unified-signatures": "error",
+        // eslint-plugin-rxjs-angular
+        //"rxjs-angular/prefer-async-pipe": "error",
+        "rxjs-angular/prefer-takeuntil": "error"
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/all"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/all"],
       "rules": {
         // Custom rules
         "@angular-eslint/template/i18n": "off"

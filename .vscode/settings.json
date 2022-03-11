@@ -1,27 +1,20 @@
 {
+  "[css][scss][html][javascript][typescript][json][jsonc][markdown][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.fixAll.eslint": true,
     "source.organizeImports": true
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.rulers": [
-    140
-  ],
+  "editor.rulers": [140],
   "eslint.options": {
-    "extensions": [
-      ".ts",
-      ".html"
-    ]
+    "extensions": [".ts", ".html"]
   },
   "eslint.packageManager": "pnpm",
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "html"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html"],
   "files.associations": {
     ".ipfs-npmrc": "json"
   },
