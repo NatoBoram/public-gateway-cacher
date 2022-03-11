@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 * Updated `gateways.json`
 * Upgraded to Angular 13
+* Targets ESNext
 
 ### Deprecated
 

@@ -28,11 +28,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
-    "module": "es2020",
+    "target": "ESNext",
+    "module": "ESNext",
     "lib": [
-      "es2018",
-      "dom"
+      "ESNext",
+      "DOM"
     ]
   },
   "angularCompilerOptions": {
