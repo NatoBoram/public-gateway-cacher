@@ -7,14 +7,12 @@ describe("PagesComponent", (): void => {
   let component: PagesComponent
   let fixture: ComponentFixture<PagesComponent>
 
-  beforeEach(
-    waitForAsync((): void => {
-      void TestBed.configureTestingModule({
-        imports: [HttpClientTestingModule],
-        declarations: [PagesComponent],
-      }).compileComponents()
-    })
-  )
+  beforeEach(waitForAsync((): void => {
+    void TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      declarations: [PagesComponent],
+    }).compileComponents()
+  }))
 
   beforeEach((): void => {
     fixture = TestBed.createComponent(PagesComponent)

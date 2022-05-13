@@ -3,14 +3,12 @@ import { RouterTestingModule } from "@angular/router/testing"
 import { AppComponent } from "./app.component"
 
 describe("AppComponent", (): void => {
-  beforeEach(
-    waitForAsync((): void => {
-      void TestBed.configureTestingModule({
-        imports: [RouterTestingModule],
-        declarations: [AppComponent],
-      }).compileComponents()
-    })
-  )
+  beforeEach(waitForAsync((): void => {
+    void TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
+      declarations: [AppComponent],
+    }).compileComponents()
+  }))
 
   it("should create the app", (): void => {
     const fixture = TestBed.createComponent(AppComponent)
