@@ -28,8 +28,6 @@
   "https://ipfs-cdn.aragon.ventures/:type/:hash",
   "https://permaweb.io/:type/:hash",
   "https://ipfs.best-practice.se/:type/:hash",
-  "https://2read.net/:type/:hash",
-  "https://ipfs.2read.net/:type/:hash",
   "https://storjipfs-gateway.com/:type/:hash",
   "https://ipfs.runfission.com/:type/:hash",
   "https://ipfs.trusti.id/:type/:hash",
@@ -89,5 +87,10 @@
   "https://ipfs.tribecap.co/:type/:hash",
   "https://ipfs.kinematiks.com/:type/:hash",
   "https://c4rex.co/:type/:hash",
-  "https://ipfs.zod.tv/:type/:hash"
+  "https://ipfs.zod.tv/:type/:hash",
+  "https://nftstorage.link/:type/:hash",
+  "https://gravity.jup.io/:type/:hash",
+  "http://fzdqwfb5ml56oadins5jpuhe6ki6bk33umri35p5kt2tue4fpws5efid.onion/:type/:hash",
+  "https://tth-ipfs.com/:type/:hash",
+  "https://:type.natoboram.com/:type/:hash"
 ]

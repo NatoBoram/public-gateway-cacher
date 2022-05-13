@@ -28,7 +28,7 @@ export class GatewayService {
 
   url(gateway: string, protocol: Protocol, hashpath: string): string {
     const splits: string[] = hashpath.split("/")
-    const url: string = gateway.replace(":type", protocol).replace(":hash", splits.shift() ?? "")
+    const url: string = gateway.replaceAll(":type", protocol).replaceAll(":hash", splits.shift() ?? "")
     return splits.length ? [url, splits.join("/")].join("/") : url
   }
 }
