@@ -1,20 +1,14 @@
 {
   "[css][scss][html][javascript][typescript][json][jsonc][markdown][yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.rulers": [140]
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.fixAll.eslint": true,
-    "source.organizeImports": true
+    "source.fixAll": "always",
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.rulers": [140],
-  "eslint.options": {
-    "extensions": [".ts", ".html"]
-  },
-  "eslint.packageManager": "pnpm",
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html"],
   "files.associations": {
     ".ipfs-npmrc": "json"
   },
@@ -22,9 +16,5 @@
   "html.format.maxPreserveNewLines": 1,
   "html.format.wrapAttributes": "auto",
   "html.format.wrapLineLength": 140,
-  "npm.packageManager": "pnpm",
-  "tslint.packageManager": "pnpm",
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "npm.packageManager": "pnpm"
 }
